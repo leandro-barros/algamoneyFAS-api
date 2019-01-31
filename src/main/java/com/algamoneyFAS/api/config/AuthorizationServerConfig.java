@@ -14,28 +14,27 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
-	
+
 	@Autowired
 	private AuthenticationManager authenticationManager;
 
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.inMemory()
-			.withClient("angula")
-			.secret("@ngul@r0")
-			.scopes("read","write") // Define cliente que pode ter acesso somente a leitura, pode define scpes para diversos clientes
-			.authorizedGrantTypes("password") // Autoriza o uses e senha para o cliente, nocaso o angula
-			.accessTokenValiditySeconds(1800); // duração do token
+		clients.inMemory().withClient("angula").secret("@ngul@r0").scopes("read", "write") // Define cliente que pode
+																							// ter acesso somente a
+																							// leitura, pode define
+																							// scpes para diversos
+																							// clientes
+				.authorizedGrantTypes("password") // Autoriza o uses e senha para o cliente, nocaso o angula
+				.accessTokenValiditySeconds(1800); // duração do token
 	}
-	
+
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		endpoints
-			.tokenStore(tokenStore())
-			.authenticationManager(authenticationManager);
-			
+		endpoints.tokenStore(tokenStore()).authenticationManager(authenticationManager);
+
 	}
-	
+
 	// Armazena os tokens
 	@Bean
 	public TokenStore tokenStore() {
