@@ -25,8 +25,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 			.withClient("angular")
 			.secret("@ngul@r0")
 			.scopes("read","write") // Define cliente que pode ter acesso somente a leitura, pode define scpes para diversos clientes
-			.authorizedGrantTypes("password") // Autoriza o uses e senha para o cliente, nocaso o angula
-			.accessTokenValiditySeconds(1800); // duração do token
+			.authorizedGrantTypes("password", "refresh_token") // Autoriza o uses e senha para o cliente, no caso o angula e dar um novo token
+			.accessTokenValiditySeconds(20) // duração do token
+			.refreshTokenValiditySeconds(3600 * 24);//tempo de vida do refresh token - 1 dia.
 	}
 	
 	@Override
@@ -34,6 +35,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		endpoints
 			.tokenStore(tokenStore())
 			.accessTokenConverter(accessTokenConverter())
+			// permite enviar um novo refresh token, assim que pedir um acces tokens,
+			//enquanto se o usuário estiver usando a aplicação nunca irá deslogar sozinha
+			.reuseRefreshTokens(false) 
 			.authenticationManager(authenticationManager);
 	}
 	
