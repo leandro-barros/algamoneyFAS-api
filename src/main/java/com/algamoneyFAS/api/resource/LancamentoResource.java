@@ -14,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -49,10 +50,19 @@ public class LancamentoResource {
 	private MessageSource menssageSource;
 
 	@GetMapping
+	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_LANCAMENTO') and #oauth2.hasScope('read')")
 	public Page<Lancamento> pesquisar(LancamentoFilter lancamentoFilter, Pageable pageable) {
 		return lancamentoRepository.filtrar(lancamentoFilter, pageable);
 	}
 
+	@PostMapping
+	@PreAuthorize("hasAuthority('ROLE_CADASTRAR_LANCAMENTO') and #oauth2.hasScope('write')")
+	public ResponseEntity<Lancamento> salvar(@Valid @RequestBody Lancamento lancamento, HttpServletResponse response) {
+		Lancamento lancamentoSalvo = lancamentoService.salvar(lancamento);
+		publisher.publishEvent(new RecursoCriadoEvent(this, response, lancamentoSalvo.getId()));
+		return ResponseEntity.status(HttpStatus.CREATED).body(lancamentoSalvo);
+	}
+	
 	@GetMapping("/{codigo}")
 	public ResponseEntity<Lancamento> buscarPorCodigo(@PathVariable Long codigo) {
 		Lancamento codigoLancamentoSalvo = lancamentoRepository.findOne(codigo);
@@ -60,13 +70,6 @@ public class LancamentoResource {
 				: ResponseEntity.notFound().build();
 	}
 
-	@PostMapping
-	public ResponseEntity<Lancamento> salvar(@Valid @RequestBody Lancamento lancamento, HttpServletResponse response) {
-		Lancamento lancamentoSalvo = lancamentoService.salvar(lancamento);
-		publisher.publishEvent(new RecursoCriadoEvent(this, response, lancamentoSalvo.getId()));
-		return ResponseEntity.status(HttpStatus.CREATED).body(lancamentoSalvo);
-	}
-	
 	@ExceptionHandler({ PessoaInexistentOuInativaException.class})
 	public ResponseEntity<Object> handlePessoaInexistentOuInativaException(PessoaInexistentOuInativaException ex){
 		String mensagemUsuario = menssageSource.getMessage("pessoa.inexistente-ou-inativa", null, LocaleContextHolder.getLocale());
@@ -77,6 +80,7 @@ public class LancamentoResource {
 	
 	@DeleteMapping("/{codigo}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
+	@PreAuthorize("hasAuthority('ROLE_REMOVER_LANCAMENTO') and #oauth2.hasScope('write')")
 	public void excluir(@PathVariable Long codigo){
 		lancamentoRepository.delete(codigo);
 	}
