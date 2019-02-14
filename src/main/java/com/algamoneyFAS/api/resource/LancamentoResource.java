@@ -30,6 +30,7 @@ import com.algamoneyFAS.api.exceptionhandler.AlgamoneyFASExceptionHandler.Erro;
 import com.algamoneyFAS.api.model.Lancamento;
 import com.algamoneyFAS.api.repository.LancamentoRepository;
 import com.algamoneyFAS.api.repository.filter.LancamentoFilter;
+import com.algamoneyFAS.api.repository.projection.ResumoLacamento;
 import com.algamoneyFAS.api.service.LancamentoService;
 import com.algamoneyFAS.api.service.exception.PessoaInexistentOuInativaException;
 
@@ -53,6 +54,12 @@ public class LancamentoResource {
 	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_LANCAMENTO') and #oauth2.hasScope('read')")
 	public Page<Lancamento> pesquisar(LancamentoFilter lancamentoFilter, Pageable pageable) {
 		return lancamentoRepository.filtrar(lancamentoFilter, pageable);
+	}
+	
+	@GetMapping(params = "resumo")
+	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_LANCAMENTO') and #oauth2.hasScope('read')")
+	public Page<ResumoLacamento> resumir(LancamentoFilter lancamentoFilter, Pageable pageable) {
+		return lancamentoRepository.resumir(lancamentoFilter, pageable);
 	}
 
 	@PostMapping
