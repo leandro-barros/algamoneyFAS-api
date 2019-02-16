@@ -2,7 +2,7 @@ package com.algamoneyFAS.api.config.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("algamoneyFAS")
+@ConfigurationProperties("algamoneyfas")
 public class AlgamoneyFasApiProperty {
 
 	private String origemPermitida = "http://localhost:8080";
