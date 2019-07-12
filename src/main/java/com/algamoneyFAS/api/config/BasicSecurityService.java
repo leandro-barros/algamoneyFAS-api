@@ -25,7 +25,7 @@ public class BasicSecurityService extends WebSecurityConfigurerAdapter{
 	}
 
 	@Bean
-	private PasswordEncoder passwordEncoder() {
+	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 	
