@@ -2,10 +2,12 @@ package com.algamoneyFAS.api.config.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("algamoneyfas")
+@ConfigurationProperties("algamoney")
 public class AlgamoneyFasApiProperty {
 
-	private String origemPermitida = "http://localhost:8080";
+//	private String origemPermitida = "http://localhost:8080";
+        
+        private String originPermitida = "http://localhost:8000";
 
 	private final Seguranca seguranca = new Seguranca();
 
@@ -13,26 +15,39 @@ public class AlgamoneyFasApiProperty {
 		return seguranca;
 	}
 
-	public String getOrigemPermitida() {
-		return origemPermitida;
-	}
+    public String getOriginPermitida() {
+        return originPermitida;
+    }
 
-	public void setOrigemPermitida(String origemPermitida) {
-		this.origemPermitida = origemPermitida;
-	}
+    public void setOriginPermitida(String originPermitida) {
+        this.originPermitida = originPermitida;
+    }
 
 	public static class Seguranca {
 
-		private boolean enableHTTPS;
+		private boolean enableHttps;
 
-		public boolean isEnableHTTPS() {
-			return enableHTTPS;
+		public boolean isEnableHttps() {
+			return enableHttps;
 		}
 
-		public void setEnableHTTPS(boolean enableHTTPS) {
-			this.enableHTTPS = enableHTTPS;
+		public void setEnableHttps(boolean enableHttps) {
+			this.enableHttps = enableHttps;
 		}
 
 	}
+//	public static class Seguranca {
+//
+//		private boolean enableHTTPS;
+//
+//		public boolean isEnableHTTPS() {
+//			return enableHTTPS;
+//		}
+//
+//		public void setEnableHTTPS(boolean enableHTTPS) {
+//			this.enableHTTPS = enableHTTPS;
+//		}
+//
+//	}
 
 }

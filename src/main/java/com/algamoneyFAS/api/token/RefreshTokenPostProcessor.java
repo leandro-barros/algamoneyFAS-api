@@ -58,7 +58,7 @@ public class RefreshTokenPostProcessor implements ResponseBodyAdvice<OAuth2Acces
 			HttpServletResponse httpServletResponse) {
 		Cookie refreshTokenCookie = new Cookie("refreshToken", refreshToken);
 		refreshTokenCookie.setHttpOnly(true);
-		refreshTokenCookie.setSecure(algamoneyFasApiProperty.getSeguranca().isEnableHTTPS());
+		refreshTokenCookie.setSecure(algamoneyFasApiProperty.getSeguranca().isEnableHttps());
 		refreshTokenCookie.setPath(httpServletRequest.getContextPath() + "/oauth/token");
 		refreshTokenCookie.setMaxAge(2592000);
 		httpServletResponse.addCookie(refreshTokenCookie);
