@@ -7,7 +7,7 @@ public class AlgamoneyFasApiProperty {
 
 //	private String origemPermitida = "http://localhost:8080";
         
-        private String originPermitida = "http://localhost:8000";
+//        private String originPermitida = "http://localhost:8000";
 
 	private final Seguranca seguranca = new Seguranca();
 
