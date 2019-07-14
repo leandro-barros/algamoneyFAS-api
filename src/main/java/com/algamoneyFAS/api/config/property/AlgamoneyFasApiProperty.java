@@ -16,9 +16,9 @@ public class AlgamoneyFasApiProperty {
 		return seguranca;
 	}
 
-    public String getOriginPermitida() {
-        return originPermitida;
-    }
+//    public String getOriginPermitida() {
+//        return originPermitida;
+//    }
 
     public void setOriginPermitida(String originPermitida) {
         this.originPermitida = originPermitida;
