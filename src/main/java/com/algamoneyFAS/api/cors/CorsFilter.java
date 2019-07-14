@@ -21,34 +21,33 @@ import com.algamoneyFAS.api.config.property.AlgamoneyFasApiProperty;
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CorsFilter implements Filter {
-	
-//	private String origemPermitida = ""; // TODO: Configurar para diferentes ambientes;
 
-	@Autowired
-	private AlgamoneyFasApiProperty algamoneyFasApiProperty;
-        
-        @Override
-	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
-			throws IOException, ServletException {
-		
-		HttpServletRequest request = (HttpServletRequest) req;
-		HttpServletResponse response = (HttpServletResponse) resp;
-		
-		response.setHeader("Access-Control-Allow-Origin", algamoneyFasApiProperty.getOriginPermitida());
+//	private String origemPermitida = ""; // TODO: Configurar para diferentes ambientes;
+    @Autowired
+    private AlgamoneyFasApiProperty algamoneyFasApiProperty;
+
+    @Override
+    public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
+            throws IOException, ServletException {
+
+        HttpServletRequest request = (HttpServletRequest) req;
+        HttpServletResponse response = (HttpServletResponse) resp;
+
+        response.setHeader("Access-Control-Allow-Origin", algamoneyFasApiProperty.getOriginPermitida());
         response.setHeader("Access-Control-Allow-Credentials", "true");
-		
-		if ("OPTIONS".equals(request.getMethod()) && algamoneyFasApiProperty.getOriginPermitida().equals(request.getHeader("Origin"))) {
-			response.setHeader("Access-Control-Allow-Methods", "POST, GET, DELETE, PUT, OPTIONS");
-        	response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type, Accept");
-        	response.setHeader("Access-Control-Max-Age", "3600");
-			
-			response.setStatus(HttpServletResponse.SC_OK);
-		} else {
-			chain.doFilter(req, resp);
-		}
-		
-	}
-	
+
+        if ("OPTIONS".equals(request.getMethod()) && algamoneyFasApiProperty.getOriginPermitida().equals(request.getHeader("Origin"))) {
+            response.setHeader("Access-Control-Allow-Methods", "POST, GET, DELETE, PUT, OPTIONS");
+            response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type, Accept");
+            response.setHeader("Access-Control-Max-Age", "3600");
+
+            response.setStatus(HttpServletResponse.SC_OK);
+        } else {
+            chain.doFilter(req, resp);
+        }
+
+    }
+
 //	@Override
 //	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 //			throws IOException, ServletException {
@@ -68,14 +67,12 @@ public class CorsFilter implements Filter {
 //			chain.doFilter(request, response);
 //		}
 //	}
-	
-	@Override
-	public void init(FilterConfig filterConfig) throws ServletException {
-	}
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+    }
 
+    @Override
+    public void destroy() {
+    }
 
-	@Override
-	public void destroy() {
-	}
-	
 }
