@@ -14,10 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 
 import org.apache.catalina.util.ParameterMap;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+@Profile("oauth-security")
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class RefreshTokenCookiePreProcessorFilter implements Filter{
