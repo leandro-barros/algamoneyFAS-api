@@ -22,7 +22,7 @@ import com.algamoneyFAS.api.config.property.AlgamoneyFasApiProperty;
 
 // Classe pega o refresh_token e adiciona em um Cooke para o javaScript não ter acesso ao refreshToken.
 
-//@Profile("oauth-security")
+@Profile("oauth-security")
 @ControllerAdvice
 public class RefreshTokenPostProcessor implements ResponseBodyAdvice<OAuth2AccessToken>{
 
