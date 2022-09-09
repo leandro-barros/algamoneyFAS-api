@@ -32,3 +32,7 @@
 </p>
 
 ## 💻 Sobre o projeto
+
+Projeto do curso Fullstack Angular e Spring da AlgaWorks.
+Link: https://cafe.algaworks.com/fsas-inscricoes/
+
