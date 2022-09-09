@@ -39,3 +39,5 @@ Link: https://cafe.algaworks.com/fsas-inscricoes/
 ## 🚀 Executar o projeto
 
 ## 🛠 Tecnologias
+
+## 👨‍💻 Autor
