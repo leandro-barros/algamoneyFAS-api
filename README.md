@@ -40,4 +40,6 @@ Link: https://cafe.algaworks.com/fsas-inscricoes/
 
 ## 🛠 Tecnologias
 
+* Java
+
 ## 👨‍💻 Autor
