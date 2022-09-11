@@ -45,3 +45,5 @@ Link: https://cafe.algaworks.com/fsas-inscricoes/
 ## 👨‍💻 Autor
 
 ## 📝 Licença
+
+Projeto esta sobe a licença [MIT](./LICENSE).
