@@ -43,3 +43,5 @@ Link: https://cafe.algaworks.com/fsas-inscricoes/
 * Java
 
 ## 👨‍💻 Autor
+
+## 📝 Licença
