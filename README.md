@@ -45,6 +45,7 @@ Link: https://cafe.algaworks.com/fsas-inscricoes/
 - [Spring MVC](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 - [MySQL](https://www.mysql.com/downloads/)
+- [Maven](https://maven.apache.org/)
 
 ## 👨‍💻 Autor
 
