@@ -40,7 +40,9 @@ Link: https://cafe.algaworks.com/fsas-inscricoes/
 
 ## 🛠 Tecnologias
 
-- [Java 11](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc)
+As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
+
+- [Java 8](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Spring MVC](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
