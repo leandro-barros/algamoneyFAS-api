@@ -33,7 +33,7 @@
 
 ## 💻 Sobre o projeto
 
-Projeto do curso Fullstack Angular e Spring da AlgaWorks.
+Projeto do curso Fullstack Angular e Spring da AlgaWorks. Foi implementado API Rest para controlar as despesas e receitas de pequenos estabelecimentos.
 Link: https://cafe.algaworks.com/fsas-inscricoes/
 
 ## 🚀 Executar o projeto
