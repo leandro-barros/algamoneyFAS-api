@@ -43,6 +43,8 @@ Link curso: https://cafe.algaworks.com/fsas-inscricoes/
 
 Este projeto é uma API RESTful desenvolvida com Spring Boot, possuindo endpoints expostos para efetuar requisições.
 
+### Pré-requisitos
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
