@@ -51,6 +51,8 @@ Além disto é bom ter um editor para trabalhar com o código como [Intellij](ht
 
 O Postman é para executar as requisições.
 
+#### 🧭 Rodando a API REST
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
