@@ -53,6 +53,13 @@ O Postman é para executar as requisições.
 
 #### 🧭 Rodando a API REST
 
+```bash
+# Clone este repositório
+$ git clone <https://github.com/leandro-barros/algamoneyFAS-api.git>
+
+
+```
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
