@@ -57,6 +57,9 @@ O Postman é para executar as requisições.
 # Clone este repositório
 $ git clone <https://github.com/leandro-barros/algamoneyFAS-api.git>
 
+# Na classe principal execute o projeto.
+
+# O servidor inciará na porta 8080
 
 ```
 
