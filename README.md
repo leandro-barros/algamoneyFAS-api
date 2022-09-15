@@ -45,6 +45,12 @@ Este projeto é uma API RESTful desenvolvida com Spring Boot, possuindo endpoint
 
 ### Pré-requisitos
 
+Para executar o projeto precisa ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Java 8](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc) e [Postman](https://www.postman.com/). 
+Além disto é bom ter um editor para trabalhar com o código como [Intellij](https://www.jetbrains.com/pt-br/idea/).
+
+O Postman é para executar as requisições.
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
