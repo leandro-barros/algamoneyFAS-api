@@ -100,6 +100,8 @@ Ao realizar a autenticação, caso os dados informados estejam corretos, a API r
 }
 ```
 
+O valor retornado no atributo "access_token" é o token que deverá ser utilizado nas chamadas que necessitam de autenticação. No header dessas requisições, passe a chave "Authorization" e no valor dela passe o token precedido pela palavra Bearer (ex.: "Bearer eyJhbGciOiJIUzI1..."). Obs.: o token tem duração de 1 dia.
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
