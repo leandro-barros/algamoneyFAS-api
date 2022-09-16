@@ -81,6 +81,13 @@ No body da requisição, no Form URL Encoded (x-www-form-urlencoded), passe as s
 | username   | admin(Usuário cadastrado quando API start)     | 
 | password   | admin (Senha cadastrada quando API start)     | 
 
+No header, passe as seguintes chaves com seus respectivos valores:
+
+| KEY           | VALUE                             |
+|---------------|-----------------------------------|
+| Content-Type  | application/x-www-form-urlencoded |
+| Authorization | Basic ZnJhbWV3b3JrOmZpcnN0        |
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
