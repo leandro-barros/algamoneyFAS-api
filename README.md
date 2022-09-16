@@ -63,6 +63,14 @@ $ git clone <https://github.com/leandro-barros/algamoneyFAS-api.git>
 
 ```
 
+#### 🧭 Autenticação da API REST
+
+Para fazer a autenticação, deve-se solicitar um token JWT, para isso faça a seguinte chamada:
+
+```bash
+# POST http://localhost:8080/oauth/token
+
+```
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
