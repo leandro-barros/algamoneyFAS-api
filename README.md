@@ -88,6 +88,18 @@ No header, passe as seguintes chaves com seus respectivos valores:
 | Content-Type  | application/x-www-form-urlencoded |
 | Authorization | Basic ZnJhbWV3b3JrOmZpcnN0        |
 
+Ao realizar a autenticação, caso os dados informados estejam corretos, a API retornará objeto semelhante a este:
+
+```json
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjY5MDc5OTksInVzZXJfbmFtZSI6InRlc3RlMSIsImp0aSI6Ijk3YmQyNjQzLTNmNTAtNDlkOC1iZTIyLTRjMGQ2ZWVlYjBlOSIsImNsaWVudF9pZCI6ImZyYW1ld29yayIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.GftyR8_mc-dYyFCdxdfn_ex0Z7nIEolnS6D1gttaCUQ",
+  "token_type": "bearer",
+  "expires_in": 1799,
+  "scope": "read write",
+  "jti": "97bd2643-3f50-49d8-be22-4c0d6eeeb0e9"
+}
+```
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
