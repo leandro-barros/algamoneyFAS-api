@@ -112,6 +112,7 @@ As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 - [MySQL](https://www.mysql.com/downloads/)
 - [Maven](https://maven.apache.org/)
+- [JWT](https://jwt.io/)
 
 ## 👨‍💻 Autor
 
