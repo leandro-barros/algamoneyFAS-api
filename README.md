@@ -113,6 +113,7 @@ As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
 - [MySQL](https://www.mysql.com/downloads/)
 - [Maven](https://maven.apache.org/)
 - [JWT](https://jwt.io/)
+- [Spring Security](https://spring.io/projects/spring-security)
 
 ## 👨‍💻 Autor
 
