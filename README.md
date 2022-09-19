@@ -114,6 +114,7 @@ As seguintes ferramentas foram utilizadas no desenvolvimento do projeto:
 - [Maven](https://maven.apache.org/)
 - [JWT](https://jwt.io/)
 - [Spring Security](https://spring.io/projects/spring-security)
+- [Spring Authorization Server](https://spring.io/projects/spring-authorization-server)
 
 ## 👨‍💻 Autor
 
